@@ -1,0 +1,91 @@
+body {
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  padding: 15% 20%;
+  /* position: relative; */
+}
+h1 {
+  color: hsl(217, 19%, 35%);
+  font-size: 22px;
+}
+p {
+  color: hsl(214, 17%, 51%);
+}
+/***************************** FULL PREVIEW *****************************/
+.full-preview {
+  /* width: 850px; */
+  height: 300px;
+  display: flex;
+}
+.img-box {
+  width: 40%;
+  height: auto;
+}
+.article-img {
+  border-radius: 10px 0 0 10px;
+  object-fit: cover;
+  height: 100%;
+  display: block;
+}
+.content {
+  border-radius: 0 10px 10px 0;
+  padding: 30px 50px;
+  background-color: white;
+  width: 60%;
+}
+.profile {
+  display: flex;
+  position: relative;
+  width: 85%;
+  margin-top: 20px;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+}
+.name-date {
+  display: block;
+}
+.profile-name,
+.date {
+  margin: 0 0 0 10px;
+}
+.profile-name {
+  font-weight: 700;
+}
+.icon-circle {
+  background-color: hsl(210, 46%, 95%);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  position: relative;
+  left: 92%;
+  bottom: 12%;
+}
+/* .share {
+  align-items: center;
+  border-radius: 100px;
+  background-color: hsl(210, 46%, 95%);
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 74%;
+  bottom: 8%;
+} */
+/***************************** FOOTER *****************************/
+footer {
+  /* position: absolute;
+  bottom: 0; */
+  width: 100%;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
