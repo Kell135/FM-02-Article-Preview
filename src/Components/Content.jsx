@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Profile from "./Profile";
-import Share from "./Share";
+import ShareBox from "./ShareBox";
 
 const Content = () => {
+  const [isHidden, setHidden] = useState(true);
+
+  const handleClick = () => {
+    if (isHidden === true) {
+      setHidden(false);
+    } else if (isHidden === false) {
+      setHidden(true);
+    }
+    console.log(isHidden);
+  };
+
   return (
     <div className="content">
       <h1 className="title">
@@ -15,7 +26,23 @@ const Content = () => {
         any room feel complete.
       </p>
       <Profile />
-      <Share />
+      <div
+        className="icon-circle"
+        style={{
+          backgroundColor: isHidden
+            ? "hsl(210, 46%, 95%)"
+            : "hsl(217, 19%, 35%)",
+        }}
+      >
+        <i
+          className="fas fa-share"
+          onClick={handleClick}
+          style={{
+            color: isHidden ? "non" : "white",
+          }}
+        />
+      </div>
+      <ShareBox isActive={isHidden ? "none" : "flex"} />
     </div>
   );
 };

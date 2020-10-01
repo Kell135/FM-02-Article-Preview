@@ -26,6 +26,7 @@ p {
   border-radius: 10px 0 0 10px;
   object-fit: cover;
   height: 100%;
+  min-width: 100%;
   display: block;
 }
 .content {
@@ -34,6 +35,7 @@ p {
   background-color: white;
   width: 60%;
 }
+/***************************** PROFILE *****************************/
 .profile {
   display: flex;
   position: relative;
@@ -55,8 +57,8 @@ p {
 .profile-name {
   font-weight: 700;
 }
+
 .icon-circle {
-  background-color: hsl(210, 46%, 95%);
   height: 30px;
   width: 30px;
   border-radius: 50%;
@@ -66,7 +68,41 @@ p {
   left: 92%;
   bottom: 12%;
 }
-
+/***************************** SHARE *****************************/
+.share-box {
+  width: 55%;
+  height: 15%;
+  padding: 10px;
+  color: white;
+  background-color: hsl(217, 19%, 35%);
+  border-radius: 10px;
+  position: relative;
+  left: 66%;
+  bottom: 53%;
+  position: relative;
+}
+.share-box::after {
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid #139ee0;
+  position: absolute;
+}
+.share,
+.icon {
+  margin: 4px 4px;
+  text-align: center;
+  line-height: 30px;
+}
+.share {
+  font-size: 15px;
+  letter-spacing: 7px;
+  margin-left: 8.5%;
+}
+.icon {
+  height: 30px;
+  width: 30px;
+  font-size: 1.4rem;
+}
 /***************************** FOOTER *****************************/
 footer {
   position: absolute;
@@ -85,7 +121,7 @@ footer {
 
 @media (max-width: 1280px) {
   body {
-    padding: 7% 12%;
+    padding: 20% 12%;
   }
   footer {
     width: 76%;
