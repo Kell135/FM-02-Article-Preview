@@ -29,7 +29,7 @@ p {
   min-width: 100%;
   display: block;
 }
-.content {
+.second-part {
   border-radius: 0 10px 10px 0;
   padding: 30px 50px;
   background-color: white;
@@ -39,8 +39,9 @@ p {
 .profile {
   display: flex;
   position: relative;
-  width: 85%;
-  margin-top: 20px;
+  margin-top: 8%;
+  vertical-align: middle;
+  /* padding-top: 5%; */
 }
 .avatar {
   width: 40px;
@@ -54,10 +55,12 @@ p {
 .date {
   margin: 0 0 0 10px;
 }
+.date {
+  margin-top: 2px;
+}
 .profile-name {
   font-weight: 700;
 }
-
 .icon-circle {
   height: 30px;
   width: 30px;
@@ -65,38 +68,42 @@ p {
   text-align: center;
   line-height: 30px;
   position: relative;
-  left: 92%;
-  bottom: 12%;
+  left: 88%;
+  bottom: 36px;
 }
+
 /***************************** SHARE *****************************/
 .share-box {
-  width: 55%;
-  height: 15%;
-  padding: 10px;
-  color: white;
   background-color: hsl(217, 19%, 35%);
   border-radius: 10px;
+  color: white;
+  justify-content: center;
+  height: 15%;
+  width: 55%;
+  max-width: 250px;
+  padding: 10px;
   position: relative;
-  left: 66%;
+  left: 61%;
   bottom: 53%;
-  position: relative;
 }
 .share-box::after {
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 50px solid #139ee0;
+  content: "";
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid hsl(217, 19%, 35%);
   position: absolute;
+  left: 42%;
+  bottom: -23%;
 }
 .share,
 .icon {
-  margin: 4px 4px;
-  text-align: center;
   line-height: 30px;
+  margin: 4px 2px;
+  text-align: center;
 }
 .share {
-  font-size: 15px;
   letter-spacing: 7px;
-  margin-left: 8.5%;
+  /* margin-left: 8.5%; */
 }
 .icon {
   height: 30px;
@@ -128,8 +135,8 @@ footer {
   }
 }
 @media (max-width: 1080px) {
-  .content {
-    padding: 15px 25px;
+  .second-part {
+    padding: 0px 25px;
   }
 }
 
@@ -147,12 +154,38 @@ footer {
     width: 100%;
     height: auto;
   }
+  .second-part {
+    padding: 0;
+    width: auto;
+    background-color: transparent;
+  }
   .content {
     border-radius: 0 0 10px 10px;
     padding: 10px 20px;
-    width: auto;
+    background-color: white;
   }
   .icon-circle {
-    bottom: 33px;
+    bottom: 45px;
+    left: 88%;
+    z-index: 2;
+  }
+  .share-box {
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 0 0 10px 10px;
+    justify-content: left;
+    width: inherit;
+    max-width: none;
+    position: relative;
+    left: 0%;
+    bottom: 90px;
+    z-index: 1;
+  }
+  .share-box::after {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .icon-circle {
+    left: 82%;
   }
 }
